@@ -23,19 +23,20 @@ const Comments = connection.define(
     quality: Sequelize.INTEGER,
     response: Sequelize.TEXT,
     prodId: Sequelize.INTEGER,
+    header: Sequelize.TEXT,
   },
   {
     createdAt: false,
   },
 );
 
-// connection
-//   .sync()
-//   .then(() => {
-//     console.log('MySQL connection synced');
-//   })
-//   .catch((err) => {
-//     console.error('Synced failed: ', err);
-//   });
+connection
+  .sync()
+  .then(() => {
+    console.log('MySQL connection synced');
+  })
+  .catch((err) => {
+    console.error('Synced failed: ', err);
+  });
 
 module.exports = Comments;
