@@ -15,9 +15,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3 id="RR">REVIEWS & RATINGS</h3>
-        <OverallRating />
-        <div className="percentage">98% of customers recommend this product</div>
+        <h3 id="RR">Ratings & Reviews</h3>
+        <div className="container1">
+          <OverallRating />
+          <div className="percentage">98% of customers recommend this product</div>
+        </div>
         <Rating />
         <Specs />
         <Sort />
