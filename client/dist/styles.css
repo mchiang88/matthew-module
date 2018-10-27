@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -8,8 +8,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-#RR, .ratingNumber, .percent {
-  font-family: "adineue PRO KZ", Helvetica,Arial,sans-serif;
+#RR,
+.ratingNumber,
+.percent {
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
   font-size: 56px;
   font-weight: 600;
   font-style: normal;
@@ -27,11 +29,174 @@ body {
   box-sizing: border-box;
 }
 
-/* .container1 {
-  column-width: 100px;
+.container1 {
+  width: 545px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .overallRating {
-  /* column-count: 2; */
-  /* column-width: 100px;
-} */ 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #d9dcdd;
+  width: 230px;
+  display: inline-block;
+}
+
+.percentage {
+  width: 295px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.percent, .reviewQuestion{
+  display: inline-block;
+}
+
+.customersRec {
+  font-size: 14px;
+  width: 172.3px;
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.ratingNumber {
+  display: inline-block;
+}
+
+.container2 {
+  margin-left: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.container3 {
+
+}
+
+.container4 {
+  width: 281.6px;
+  height: 686px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sort {
+  width: 593.225px;
+  margin-left: 41.81px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+.sortOn {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+#breakdown {
+  font-family: 'adineue PRO KZ',Helvetica,Arial,sans-serif;
+  margin: 0;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.container5 {
+  height: 20px;
+  margin-bottom: 14px;
+}
+
+.commentStars {
+  float:left;
+}
+
+.date {
+  float: right;
+  color: #98989a;
+}
+
+.commentBody {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.recommend {
+  text-align: left;
+}
+
+.recommendComment {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+.userInfo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.verified, .yesCount, .noCount {
+  color: #98989a;
+  font-size: 14px;
+}
+
+.commentFooter {
+  height: 61.8px;
+}
+
+.reply {
+  float: left;
+}
+
+.reviewHelpful {
+  float: right;
+  font-size: 14px;
+}
+
+.helpful, .unhelpful {
+  display: inline-block;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+.yes, .no, .reply {
+  color: #000;
+}
+
+hr {
+  color: #98989a;
+  margin-bottom: 40px;
+}
+

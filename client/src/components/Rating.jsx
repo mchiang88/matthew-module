@@ -2,8 +2,8 @@ import React from 'react';
 import StarListEntry from './StarListEntry';
 
 const Rating = props => (
-  <div>
-    <h5 id="breakdown">RATING BREAKDOWN</h5>
+  <div className="rating">
+    <h5 id="breakdown">Rating Breakdown</h5>
     {/* if click, show "showing reviews: ..." so possibly change to class component for state */}
     <ul>
       <StarListEntry />

@@ -14,11 +14,15 @@ class Sort extends React.Component {
 
   render() {
     return (
-      <div>
-        <span className="sortOn">SORT ON</span>
-        <button className="relevant">RELEVANT</button>
-        <button className="helpful">HELPFUL</button>
-        <button className="NEWEST">NEWEST</button>
+      <div className="sort">
+        <div class="commentHeader">
+          <div className="sortOn">SORT ON</div>
+          <div className="buttons">
+            <button className="relevant">RELEVANT</button>
+            <button className="helpfulButton">HELPFUL</button>
+            <button className="newest">NEWEST</button>
+          </div>
+        </div>
         <Comment />
         <Comment />
         <div className="loadAndWrite">

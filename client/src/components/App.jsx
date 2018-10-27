@@ -20,12 +20,16 @@ class App extends React.Component {
           <OverallRating />
           <div className="percentage">
             <div className="percent">98%</div> 
-            <p>of customers recommend this product</p>
+            <div className="customersRec">of customers recommend this product</div>
           </div>
         </div>
-        <Rating />
-        <Specs />
-        <Sort />
+        <div className="container3">
+          <div className="container4">          
+            <Rating />
+            <Specs />
+          </div>
+          <Sort />
+        </div>
       </div>
     );
   }
