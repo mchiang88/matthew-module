@@ -191,12 +191,51 @@ button {
   letter-spacing: 1px;
 }
 
-.yes, .no, .reply {
+.yes, .no, .reply, a {
   color: #000;
 }
 
 hr {
   color: #98989a;
   margin-bottom: 40px;
+}
+
+ul {
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.starListEntry {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.starRating, .starPercentage, .starCount {
+  display: inline-block;
+}
+
+.starRating {
+  font-size: 13px;
+}
+
+.starCount {
+  font-size: 11px;
+}
+
+.starPercentage {
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  margin: 0 10px;
+  background-color: #d9dcdd;
+  width: 186.313px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
