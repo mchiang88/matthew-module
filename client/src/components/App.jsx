@@ -3,6 +3,7 @@ import OverallRating from './OverallRating';
 import Rating from './Rating';
 import Specs from './Specs';
 import Sort from './Sort';
+import '../css/App.css';
 
 class App extends React.Component {
   constructor(props) {

@@ -1,0 +1,63 @@
+.starListEntry {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.starRating {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: color 0.2s, background-color 0.2s;
+  display: inline-block;
+}
+
+.starRating:hover {
+  color: white;
+  background-color: black;
+}
+
+.starRating::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 2px;
+  bottom: 2px;
+  width: calc(100% - 4px);
+  border-bottom-width: 1.01565px;
+  border-bottom-style: solid;
+  border-color: #000;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.starRating:hover::after {
+  border-color: white;
+  background-color: black;
+}
+
+.starPercentage {
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  margin: 0 10px;
+  background-color: #d9dcdd;
+  width: 178.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.filled {
+  height: 100%;
+  background-color: #000;
+  width: 50%;
+}
+
+.starCount {
+  font-size: 11px;
+  letter-spacing: 2px;
+  display: inline-block;
+}

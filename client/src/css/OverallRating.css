@@ -1,0 +1,24 @@
+.overallRating {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #d9dcdd;
+  width: 230px;
+  display: inline-block;
+}
+
+.ratingNumber {
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+
+.container2 {
+  margin-left: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}

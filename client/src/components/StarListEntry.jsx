@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/StarListEntry.css'
 
 const StarListEntry = props => (
   <li className="starListEntry">

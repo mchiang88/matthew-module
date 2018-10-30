@@ -1,5 +1,6 @@
 import React from 'react';
 import StarListEntry from './StarListEntry';
+import '../css/Rating.css'
 
 const Rating = props => (
   <div className="rating">

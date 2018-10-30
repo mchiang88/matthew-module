@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Comment.css'
 
 const Comment = props => (
   <div className="comment">

@@ -1,0 +1,78 @@
+body {
+  text-align: center;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  margin-top: 60px;
+  padding: 0 15px 60px 15px;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+#RR {
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.percent {
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+
+.container1 {
+  width: 545px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.percentage {
+  width: 295px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.customersRec {
+  font-size: 14px;
+  width: 172.3px;
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.container4 {
+  width: 281.6px;
+  height: 686px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+}

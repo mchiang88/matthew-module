@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/OverallRating.css';
 
 const OverallRating = props => (
   <div className="overallRating">

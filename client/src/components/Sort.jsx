@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import '../css/Sort.css';
 
 class Sort extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Sort extends React.Component {
   render() {
     return (
       <div className="sort">
-        <div class="commentHeader">
+        <div className="commentHeader">
           <div className="sortOn">SORT ON</div>
           <div className="buttons">
             <div onClick={this.handleClick} id={this.state.view === 'relevant' ? 'active' : null} className="relevant">RELEVANT</div>
