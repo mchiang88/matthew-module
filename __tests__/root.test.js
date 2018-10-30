@@ -10,3 +10,7 @@ describe('Accessing the database', () => {
     });
   });
 });
+
+afterAll(() => {
+  Comments.sequelize.close();
+});

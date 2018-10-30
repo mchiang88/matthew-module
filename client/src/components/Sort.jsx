@@ -8,9 +8,16 @@ class Sort extends React.Component {
       view: 'relevant',
       //pass in comments from props
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   //handle props.filter function
+
+  handleClick(e) {
+    this.setState({
+      view: e.target.className
+    })
+  }
 
   render() {
     return (
@@ -18,16 +25,17 @@ class Sort extends React.Component {
         <div class="commentHeader">
           <div className="sortOn">SORT ON</div>
           <div className="buttons">
-            <button className="relevant">RELEVANT</button>
-            <button className="helpfulButton">HELPFUL</button>
-            <button className="newest">NEWEST</button>
+            <div onClick={this.handleClick} id={this.state.view === 'relevant' ? 'active' : null} className="relevant">RELEVANT</div>
+            <div onClick={this.handleClick} id={this.state.view === 'helpfulButton' ? 'active' : null} className="helpfulButton">HELPFUL</div>
+            <div onClick={this.handleClick} id={this.state.view === 'newest' ? 'active' : null} className="newest">NEWEST</div>
           </div>
         </div>
         <Comment />
         <Comment />
         <div className="loadAndWrite">
-          <button className="load">LOAD MORE</button>
-          <button className="write">WRITE A REVIEW -></button>
+          <button type="button" className="load">LOAD MORE</button>
+          <button type="button" className="write">WRITE A REVIEW -></button>
+          <div className="whiteShadow"></div>
         </div>
       </div>
     )

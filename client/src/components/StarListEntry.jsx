@@ -2,7 +2,7 @@ import React from 'react';
 
 const StarListEntry = props => (
   <li className="starListEntry">
-    <div className="starRating"><a href="">5 STARS</a></div>
+    <div className="starRating">5 STARS</div>
     <div className="starPercentage">
       <div className="filled"></div>
     </div>
