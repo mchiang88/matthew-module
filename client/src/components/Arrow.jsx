@@ -7,8 +7,8 @@ const Arrow = props => (
       d="M17.59 7l5 5-5 5M0 12h22"
       fill="none"
       stroke="currentColor"
-      stroke-miterlimit="10"
-      stroke-width="2"
+      strokeMiterlimit="10"
+      strokeWidth="2"
     />
   </svg>
 );

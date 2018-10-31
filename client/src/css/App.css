@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'AdihausDIN-bold';
+  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Bold.woff2?hash=1oG5G')
+    format('woff2');
+}
+
 body {
   text-align: center;
   font-family: AdihausDIN, Helvetica, Arial, sans-serif;
@@ -39,7 +45,7 @@ body {
 
 .percent {
   font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
-  font-size: 56px;
+  font-size: 66px;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
@@ -48,6 +54,7 @@ body {
 }
 
 .container1 {
+  display: flex;
   width: 545px;
   height: 100px;
   margin: auto;
@@ -57,21 +64,24 @@ body {
 .percentage {
   width: 295px;
   margin-left: 20px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .customersRec {
   font-size: 14px;
   width: 172.3px;
-  display: inline-block;
+  display: flex;
   text-align: left;
   margin-left: 10px;
 }
 
 .container4 {
-  width: 22.5%;
+  width: 20%;
   padding-left: 15px;
   padding-right: 15px;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  height: 730px;
 }

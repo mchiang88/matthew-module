@@ -5,6 +5,7 @@ const fakeData = [];
 
 for (let i = 0; i < 10; i++) {
   const response = Math.random() > 0.5 ? null : faker.lorem.sentence();
+  const header = Math.random() > 0.5 ? null : faker.lorem.sentence();
   const object = {
     user: faker.internet.userName(),
     prodRating: faker.random.number({ min: 1, max: 5 }),
@@ -20,7 +21,7 @@ for (let i = 0; i < 10; i++) {
     quality: faker.random.number({ min: 1, max: 4 }),
     response,
     prodId: faker.random.number(),
-    header: faker.lorem.sentence(),
+    header,
   };
   fakeData.push(object);
 }
