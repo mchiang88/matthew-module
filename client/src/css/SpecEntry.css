@@ -1,0 +1,76 @@
+.specEntry {
+  margin-bottom: 20px;
+}
+
+.specName {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+.comparisonbar {
+  height: 4px;
+  background-color: #d9dcdd;
+  overflow: hidden;
+  position: relative;
+}
+
+.barIndicator {
+  z-index: 3;
+  width: 49px;
+  background-color: #000;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  left: 60%;
+}
+
+.steps {
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.s1 {
+  left: 25%;
+}
+
+.s2 {
+  left: 50%;
+}
+
+.s3 {
+  left: 75%;
+}
+
+.comparisonBarLabel {
+  margin-top: 5px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.attribute1 {
+  width: 33.33%;
+  display: inline-block;
+  text-align: left;
+}
+
+.attribute2 {
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+}
+
+.attribute3 {
+  width: 33.33%;
+  display: inline-block;
+  text-align: right;
+}

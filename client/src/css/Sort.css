@@ -1,0 +1,112 @@
+.sort {
+  width: 38%;
+  margin-left: 41.81px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+.sortOn {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.load,
+.write {
+  background-color: white;
+  float: left;
+  border: 1.012px solid black;
+  color: black;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+  font-family: inherit;
+  text-align: left;
+  letter-spacing: 2px;
+  width: 49%;
+  height: 50px;
+  padding: 0 21px 0 21px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.load:hover,
+.write:hover {
+  color: #98989a;
+}
+
+.load:active {
+  color: black;
+  transform: scale(0.97, 0.97);
+}
+
+.write {
+  float: right;
+  color: white;
+  background-color: black;
+  border: 0;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+  bottom: 3px;
+}
+
+.write:active {
+  color: white;
+  transform: translate(3px, 3px);
+}
+
+.write:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 1px #000;
+  box-sizing: border-box;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+.write:active:after {
+  transform: translate(-3px, -3px);
+}
+
+.buttons {
+  display: flex;
+}
+
+.relevant,
+.helpfulButton,
+.newest {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 2px;
+  background-color: white;
+  height: 16px;
+  padding: 16px 17px 16px 17px;
+  border: 1px solid #d9dcdd;
+  color: #98989a;
+  font-weight: 700;
+  cursor: pointer;
+  flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.relevant:hover,
+.helpfulButton:hover,
+.newest:hover {
+  color: black;
+}
+
+#active {
+  color: black;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 black;
+}

@@ -1,0 +1,120 @@
+.container5 {
+  height: 20px;
+  margin-bottom: 14px;
+}
+
+.commentStars {
+  float: left;
+}
+
+.date {
+  float: right;
+  font-size: 14px;
+  color: #98989a;
+}
+
+.commentBody {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.recommend {
+  text-align: left;
+}
+
+.recommendComment {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+.userInfo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.verified,
+.yesCount,
+.noCount {
+  color: #98989a;
+  font-size: 14px;
+}
+
+.commentFooter {
+  height: 61.8px;
+}
+
+.reply {
+  float: left;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.reply:hover {
+  color: white;
+  background-color: black;
+}
+
+.yes,
+.no,
+.reply,
+a {
+  color: #000;
+}
+
+.reviewHelpful {
+  float: right;
+  font-size: 14px;
+}
+
+.helpful,
+.unhelpful {
+  display: inline-block;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+.reviewQuestion {
+  display: inline-block;
+}
+
+.yes,
+.no {
+  display: inline;
+  vertical-align: bottom;
+  padding-left: 1px;
+  padding-right: 5px;
+  letter-spacing: 0px;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.yes:hover,
+.no:hover {
+  background-color: black;
+  color: white;
+}
+
+hr {
+  color: #98989a;
+  margin-bottom: 40px;
+}
+
+.commentHeader {
+  font-size: 20px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  font-family: 'Adineue PRO kz',Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  clear: both;
+  text-align: left;
+}

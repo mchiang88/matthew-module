@@ -1,0 +1,472 @@
+body {
+  text-align: center;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#RR,
+.ratingNumber,
+.percent {
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+#RR {
+  font-size: 36px;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.container1 {
+  width: 545px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.overallRating {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #d9dcdd;
+  width: 230px;
+  display: inline-block;
+}
+
+.percentage {
+  width: 295px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.percent,
+.reviewQuestion {
+  display: inline-block;
+}
+
+.customersRec {
+  font-size: 14px;
+  width: 172.3px;
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.ratingNumber {
+  display: inline-block;
+}
+
+.container2 {
+  margin-left: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.container4 {
+  width: 281.6px;
+  height: 686px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sort {
+  width: 45%;
+  margin-left: 41.81px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+.sortOn {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+
+.relevant,
+.helpfulButton,
+.newest {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 27.2%;
+  height: 16px;
+  padding: 16px 17px 16px 17px;
+  border: 1px solid #d9dcdd;
+  color: #98989a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.relevant:hover,
+.helpfulButton:hover,
+.newest:hover {
+  color: black;
+}
+
+#active {
+  color: black;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 black;
+}
+
+.rating {
+  border-bottom: 1px solid #ebedee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#breakdown {
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.container5 {
+  height: 20px;
+  margin-bottom: 14px;
+}
+
+.commentStars {
+  float: left;
+}
+
+.date {
+  float: right;
+  font-size: 14px;
+  color: #98989a;
+}
+
+.commentBody {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.recommend {
+  text-align: left;
+}
+
+.recommendComment {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+.userInfo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.verified,
+.yesCount,
+.noCount {
+  color: #98989a;
+  font-size: 14px;
+}
+
+.commentFooter {
+  height: 61.8px;
+}
+
+.reply {
+  float: left;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.reply:hover {
+  color: white;
+  background-color: black;
+}
+
+.reviewHelpful {
+  float: right;
+  font-size: 14px;
+}
+
+.helpful,
+.unhelpful {
+  display: inline-block;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+.yes,
+.no,
+.reply,
+a {
+  color: #000;
+}
+
+.yes,
+.no {
+  display: inline;
+  vertical-align: bottom;
+  padding-left: 1px;
+  padding-right: 5px;
+  letter-spacing: 0px;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.yes:hover,
+.no:hover {
+  background-color: black;
+  color: white;
+}
+
+hr {
+  color: #98989a;
+  margin-bottom: 40px;
+}
+
+ul {
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.starListEntry {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.starRating,
+.starPercentage,
+.starCount {
+  display: inline-block;
+}
+
+.starRating {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.starRating:hover {
+  color: white;
+  background-color: black;
+}
+
+.starRating::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 2px;
+  bottom: 2px;
+  width: calc(100% - 4px);
+  border-bottom-width: 1.01565px;
+  border-bottom-style: solid;
+  border-color: #000;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.starRating:hover::after {
+  border-color: white;
+  background-color: black;
+}
+
+.starCount {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.starPercentage {
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  margin: 0 10px;
+  background-color: #d9dcdd;
+  width: 178.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filled {
+  height: 100%;
+  background-color: #000;
+  width: 50%;
+}
+
+.specEntry {
+  margin-bottom: 20px;
+}
+
+.specName {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+.comparisonbar {
+  height: 4px;
+  background-color: #d9dcdd;
+  overflow: hidden;
+  position: relative;
+}
+
+.steps {
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.s1 {
+  left: 25%;
+}
+
+.s2 {
+  left: 50%;
+}
+
+.s3 {
+  left: 75%;
+}
+
+.comparisonBarLabel {
+  margin-top: 5px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.attribute1 {
+  width: 33.33%;
+  display: inline-block;
+  text-align: left;
+}
+
+.attribute2 {
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+}
+
+.attribute3 {
+  width: 33.33%;
+  display: inline-block;
+  text-align: right;
+}
+
+.barIndicator {
+  z-index: 3;
+  width: 49px;
+  background-color: #000;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  left: 60%;
+}
+
+.load,
+.write,
+.whiteShadow {
+  font-family: inherit;
+  text-align: left;
+  letter-spacing: 2px;
+  width: 49%;
+  height: 50px;
+  padding: 0 21px 0 21px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.load {
+  background-color: white;
+  float: left;
+  border: 1.012px solid black;
+  color: black;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+.load:hover,
+.write:hover {
+  color: #98989a;
+}
+
+*:focus {
+  outline: none;
+}
+
+.load:active {
+  color: black;
+  transform: scale(0.97, 0.97);
+}
+
+.write {
+  float: right;
+  color: white;
+  background-color: black;
+  border: 0;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+  bottom: 3px;
+}
+
+.write:active {
+  color: white;
+  transform: translate(3px, 3px);
+}
+
+.whiteShadow {
+  height: 49px;
+  top: 1px;
+  width: 42%;
+  left: 305px;
+  position: relative;
+  box-shadow: inset 0 0 0 1px #000;
+  z-index: 1;
+}
