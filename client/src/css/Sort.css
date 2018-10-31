@@ -1,5 +1,5 @@
 .sort {
-  width: 45%;
+  width: 38%;
   margin-left: 41.81px;
   padding-left: 15px;
   padding-right: 15px;
@@ -14,8 +14,7 @@
 }
 
 .load,
-.write,
-.whiteShadow {
+.write {
   background-color: white;
   float: left;
   border: 1.012px solid black;
@@ -58,14 +57,25 @@
   transform: translate(3px, 3px);
 }
 
-.whiteShadow {
-  height: 49px;
-  top: 1px;
-  width: 42%;
-  left: 305px;
-  position: relative;
+.write:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
   box-shadow: inset 0 0 0 1px #000;
-  z-index: 1;
+  box-sizing: border-box;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+.write:active:after {
+  transform: translate(-3px, -3px);
+}
+
+.buttons {
+  display: flex;
 }
 
 .relevant,
@@ -78,13 +88,15 @@
   font-size: 13px;
   letter-spacing: 2px;
   background-color: white;
-  width: 27.2%;
   height: 16px;
   padding: 16px 17px 16px 17px;
   border: 1px solid #d9dcdd;
   color: #98989a;
   font-weight: 700;
   cursor: pointer;
+  flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
 }
 
 .relevant:hover,

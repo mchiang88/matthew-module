@@ -3,6 +3,7 @@
   text-align: left;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
 }
 
 .starRating {
@@ -37,6 +38,7 @@
 }
 
 .starPercentage {
+  top: 10px;
   height: 4px;
   border-radius: 4px;
   position: relative;
@@ -44,10 +46,8 @@
   flex-grow: 1;
   margin: 0 10px;
   background-color: #d9dcdd;
-  width: 178.5px;
   margin-left: 10px;
   margin-right: 10px;
-  display: inline-block;
 }
 
 .filled {

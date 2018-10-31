@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 import '../css/Sort.css';
+import Arrow from './Arrow';
 
 class Sort extends React.Component {
   constructor(props) {
@@ -34,9 +35,14 @@ class Sort extends React.Component {
         <Comment />
         <Comment />
         <div className="loadAndWrite">
-          <button type="button" className="load">LOAD MORE</button>
-          <button type="button" className="write">WRITE A REVIEW -></button>
-          <div className="whiteShadow"></div>
+          <button type="button" className="load">
+            LOAD MORE
+            <Arrow />
+          </button>
+          <button type="button" className="write">
+            WRITE A REVIEW
+            <Arrow />
+          </button>
         </div>
       </div>
     )
