@@ -12,7 +12,10 @@ class App extends React.Component {
     this.state = {
       filter: null,
       data: [],
+      percent: 0,
+      overallRating: 0,
     };
+    this.extractInfo = this.extractInfo.bind(this);
   }
 
   componentDidMount() {
@@ -27,22 +30,27 @@ class App extends React.Component {
         this.setState({
           data: result.data,
         });
-        console.log('Fetch success');
+        this.extractInfo();
       })
       .catch(err => {
         console.error('Fetch error, ', err);
       });
   }
 
-  extractInfo(stats) {
+  extractInfo() {
     let length = this.state.data.length;
-    let accum = 0;
+    let percent = 0;
+    let overallRating = 0;
     this.state.data.forEach(comment => {
-      if (stats === 'percent' && comment.recommend) {
-        accum += 1;
+      if (comment.recommend) {
+        percent += 1;
       }
-    })
-    return Math.floor(accum/length * 100);
+      overallRating += comment.prodRating;
+    });
+    this.setState({
+      percent: Math.round((percent / length) * 100),
+      overallRating: (overallRating / length).toFixed(1)
+    });
   }
 
   render() {
@@ -50,18 +58,16 @@ class App extends React.Component {
       <div>
         <h3 id="RR">Ratings & Reviews</h3>
         <div className="container1">
-          <OverallRating />
+          <OverallRating rating={this.state.overallRating} data={this.state.data}/>
           <div className="percentage">
-            <div className="percent">48%</div>
-            <div className="customersRec">
-              of customers recommend this product
-            </div>
+            <div className="percent">{this.state.percent}%</div>
+            <div className="customersRec">of customers recommend this product</div>
           </div>
         </div>
         <div className="container3">
           <div className="container4">
-            <Rating />
-            <Specs />
+            <Rating data={this.state.data}/>
+            <Specs data={this.state.data}/>
           </div>
           <Sort />
         </div>

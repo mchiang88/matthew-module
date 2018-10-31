@@ -3,11 +3,11 @@ import '../css/StarListEntry.css'
 
 const StarListEntry = props => (
   <li className="starListEntry">
-    <div className="starRating">5 STARS</div>
+    <div className="starRating">{props.id} STARS</div>
     <div className="starPercentage">
-      <div className="filled"></div>
+      <div className="filled" style={{width: `${(props.count/props.length * 100)}%`}}></div>
     </div>
-    <div className="starCount">35</div>
+    <div className="starCount">{props.count}</div>
   </li>
 );
 
