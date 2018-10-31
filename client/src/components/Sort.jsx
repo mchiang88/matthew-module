@@ -24,7 +24,7 @@ class Sort extends React.Component {
   render() {
     return (
       <div className="sort">
-        <div className="commentHeader">
+        <div className="Header">
           <div className="sortOn">SORT ON</div>
           <div className="buttons">
             <div onClick={this.handleClick} id={this.state.view === 'relevant' ? 'active' : null} className="relevant">RELEVANT</div>
