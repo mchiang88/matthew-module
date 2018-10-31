@@ -13,7 +13,9 @@ const Comment = props => (
       </div>
       <div className="date">September 20, 2018</div>
     </div>
-    <div className="commentHeader" />
+    <div className="commentHeader">
+      Incredible Shoe. Great Quality
+    </div>
     <div className="commentBody">Great product. Been wanting 2.0 3 M for a while now</div>
     <div className="recommend">
       <CheckMark />

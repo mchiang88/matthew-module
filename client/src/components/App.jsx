@@ -21,7 +21,7 @@ class App extends React.Component {
           <OverallRating />
           <div className="percentage">
             <div className="percent">98%</div> 
-            <div className="customersRec">of customers recommend this product</div>
+            <div className="customersRec">of customers <br /> recommend this product</div>
           </div>
         </div>
         <div className="container3">
