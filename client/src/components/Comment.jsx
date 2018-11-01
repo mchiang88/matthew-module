@@ -17,6 +17,7 @@ const Comment = props => {
     <div className="comment">
       <div className="container5">
         <div className="commentStars">
+        {props.comment.prodRating}
           {props.ratingToStarTranslation(props.comment.prodRating).map((filling, i) => (
             <Star filling={filling} key={i}/>
           ))}

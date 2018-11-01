@@ -18,9 +18,41 @@
 }
 
 ul {
+  display: inline;
   font-size: 16px;
   line-height: 22px;
   width: 100%;
   list-style-type: none;
   padding: 0;
+}
+
+.filterstatus {
+  box-sizing: border-box;
+  text-align: center;
+  list-style: none;
+}
+
+.filterListItem {
+  font-family: adihausdin-bold;
+  display: inline;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+.filterList {
+  float: left;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
 }

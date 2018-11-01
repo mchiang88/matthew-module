@@ -4,7 +4,6 @@ import Star from './Star';
 
 const OverallRating = props => (
   <div className="overallRating">
-  {console.log(props.ratingToStarTranslation(props.rating))}
     <div className="ratingNumber">{props.rating}</div>
     <div className="container2">
       <div className="ratingStars">
