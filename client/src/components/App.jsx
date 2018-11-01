@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.fetch();
+    this.fetch('relevant', 2);
   }
 
   fetch() {
@@ -53,12 +53,25 @@ class App extends React.Component {
     });
   }
 
+  ratingToStarTranslation(rating) {
+    let arr = Array(5).fill('0%');
+    let decimal = 1 - (Math.ceil(rating) - rating).toFixed(1);
+    for (let i = 0; i < Math.ceil(rating); i++) {
+      if (i === Math.ceil(rating) - 1) {
+        arr[i] = (decimal * 100).toString() + "%";
+      } else {
+        arr[i] = "100%";
+      }
+    }
+    return arr;
+  };
+
   render() {
     return (
       <div>
         <h3 id="RR">Ratings & Reviews</h3>
         <div className="container1">
-          <OverallRating rating={this.state.overallRating} data={this.state.data}/>
+          <OverallRating ratingToStarTranslation={this.ratingToStarTranslation} rating={this.state.overallRating} data={this.state.data}/>
           <div className="percentage">
             <div className="percent">{this.state.percent}%</div>
             <div className="customersRec">of customers recommend this product</div>
@@ -69,7 +82,7 @@ class App extends React.Component {
             <Rating data={this.state.data}/>
             <Specs data={this.state.data}/>
           </div>
-          <Sort />
+          <Sort ratingToStarTranslation={this.ratingToStarTranslation}/>
         </div>
       </div>
     );
