@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.fetch('relevant', 2);
+    this.fetch();
   }
 
   fetch() {

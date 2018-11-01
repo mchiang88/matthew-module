@@ -22,8 +22,10 @@ class Sort extends React.Component {
     this.fetchComments(this.state.view, this.state.limit);
   }
 
-  componentDidUpdate() {
-    this.fetchComments(this.state.view, this.state.limit);
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.limit !== prevState.limit || this.state.view !== prevState.view) {
+      this.fetchComments(this.state.view, this.state.limit);
+    }
   }
 
   fetchComments(type, limit) {
@@ -83,7 +85,7 @@ class Sort extends React.Component {
           </div>
         </div>
         {this.state.comments.map((comment, i) => (
-          <Comment comment={comment} key={i} />
+          <Comment ratingToStarTranslation={this.props.ratingToStarTranslation} comment={comment} key={i} />
         ))}
         <div className="loadAndWrite">
           <button onClick={this.handleLoadClick} type="button" className="load">

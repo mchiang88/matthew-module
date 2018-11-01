@@ -1,6 +1,6 @@
 import React from 'react';
 import StarListEntry from './StarListEntry';
-import '../css/Rating.css'
+import '../css/Rating.css';
 
 class Rating extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class Rating extends React.Component {
     })
     return count;
   }
+  
 
   render() {
     return (
