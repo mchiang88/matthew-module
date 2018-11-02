@@ -4,6 +4,11 @@
     format('woff2');
 }
 
+@font-face {
+  font-family: "AdihausDIN";
+  src: url("https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Regular.woff2") format('woff2');
+}
+
 body {
   text-align: center;
   font-family: AdihausDIN, Helvetica, Arial, sans-serif;
@@ -58,7 +63,7 @@ body {
   width: 545px;
   height: 100px;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .percentage {

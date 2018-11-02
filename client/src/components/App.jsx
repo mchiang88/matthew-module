@@ -123,7 +123,6 @@ class App extends React.Component {
         this.fetchComments(this.state.view, this.state.limit, this.state.filters);
       },
     );
-    console.log(this.state.filters);
   }
 
   handleRemoveFilterClick() {

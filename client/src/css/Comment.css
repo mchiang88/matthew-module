@@ -119,3 +119,23 @@ hr {
   clear: both;
   text-align: left;
 }
+
+.response {
+  text-align: left;
+  padding: 20px;
+  margin: 20px 0px;
+  background-color: #ebedee;
+  box-sizing: border-box;
+}
+
+.responseHeader {
+  margin-bottom: 20px;
+}
+
+span {
+  vertical-align: top;
+}
+
+#logo {
+  margin-right: 10px;
+}
