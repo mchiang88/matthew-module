@@ -33,10 +33,8 @@ const Comment = props => {
     <div className="comment">
       <div className="container5">
         <div className="commentStars">
-          {props.comment.prodRating}
-          {console.log(props.ratingToStarTranslation(props.comment.prodRating))}
           {props.ratingToStarTranslation(props.comment.prodRating).map((filling, i) => (
-            <Star filling={filling} key={i} />
+            <Star filling={filling} key={i} id={Math.random()}/>
           ))}
         </div>
         <div className="date">{moment(props.comment.date).format('ll')}</div>

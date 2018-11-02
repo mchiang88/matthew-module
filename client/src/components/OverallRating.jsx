@@ -4,12 +4,11 @@ import Star from './Star';
 
 const OverallRating = props => (
   <div className="overallRating">
-  {console.log(props.ratingToStarTranslation(props.rating))}
     <div className="ratingNumber">{props.rating}</div>
     <div className="container2">
       <div className="ratingStars">
         {props.ratingToStarTranslation(props.rating).map((filling, i) => (
-          <Star filling={filling} key={i} />
+          <Star filling={filling} key={i} id={Math.random()}/>
         ))}
       </div>
       <span className="reviewNumber">

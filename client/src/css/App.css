@@ -22,7 +22,7 @@ body {
 #root {
   margin-top: 60px;
   padding: 0 15px 60px 15px;
-  width: 100%;
+  width: 1280px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -81,11 +81,15 @@ body {
   margin-left: 10px;
 }
 
+.container3 {
+  display: flex;
+}
+
 .container4 {
-  width: 20%;
+  margin-left: 4.16667%;
+  width: 29.16667%;
   padding-left: 15px;
   padding-right: 15px;
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
   height: 730px;
