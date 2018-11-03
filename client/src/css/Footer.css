@@ -1,11 +1,10 @@
 .footerHead {
   width: 100%;
-  height: 76px;
   display: flex;
   justify-content: space-evenly;
   background-color: black;
   position: relative;
-  padding: 40px 0 20px 0;
+  padding: 40px 0 0 0;
 }
 
 .footerFoot {
@@ -15,7 +14,7 @@
 
 .headerContent {
   display: flex;
-  max-width: 960px;
+  width: 960px;
 }
 
 .signUp {
@@ -38,42 +37,39 @@
 }
 
 .email {
-  height: 50px;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  height: 47.969px;
   font-weight: 400;
   font-style: normal;
-  min-height: 50px;
   font-size: 16px;
   line-height: 22px;
   color: #000;
   border: 1.01565px solid #98989a;
   padding: 0 18px;
-  width: 276.969px;
+  width: 326.969px;
   margin: 0;
 }
 
 .emailButton {
+  float: right;
+  bottom: 50px;
+  width: 50px;
   cursor: pointer;
-  height: 52px;
+  height: 50px;
   padding: 0;
+  border: 1.016px solid white;
   position: relative;
-  right: 48px;
-  bottom: 1px;
   background-color: #0071ae;
   color: white;
 }
 
-.footerArrow {
-  width: 24px;
-  position: relative;
-  right: 11px;
-  height: 49px;
-}
-
 .footerFoot {
-  width: 960px;
-  margin: auto;
+  clear: both;
+  padding: 20px 0 0;
+  margin: 0 auto 29px;
+  width: 950px;
+  max-width: 100%;
   height: 343px;
-  padding-top: 20px;
 }
 
 li,
@@ -87,10 +83,124 @@ h5 {
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 23px;
-  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
 }
 
-li {
+.footerListItem {
+  cursor: pointer;
   line-height: 23px;
   font-size: 13px;
+}
+
+.footerListItem:hover {
+  text-decoration: underline;
+}
+
+.emailWrapper {
+  width: 365px;
+  float: right;
+}
+
+.emailButton:hover {
+  color: #98989a;
+}
+
+.emailButton:active {
+  color: white;
+  border: 1px solid #98989a;
+  transform: scale(0.95, 0.95);
+}
+
+::placeholder {
+  letter-spacing: 1.2px;
+  font-size: 13px;
+  color: black;
+}
+
+.agreement {
+  letter-spacing: 0px;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 15px;
+  color: #d9dcdd;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.privacy {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.privacy:hover {
+  color: black;
+  background-color: #fff;
+}
+
+.emailError {
+  color: #e63f3f;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 21px;
+  text-align: left;
+}
+
+.X {
+  color: #f44336;
+  width: 50px;
+  height: 50px;
+  float: right;
+  bottom: 50px;
+  position: relative;
+  background-image: url(https://www.adidas.com/glass/assets/img/adidas/img-adidas-inputs-error-state2x.png?hash=1x1aO);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: calc(100% - 18px) 17px;
+}
+
+.emailRed {
+  border-color: #e63f3f;
+  box-shadow: 0 1px #e63f3f;
+}
+
+.tradeMarkFooter {
+  vertical-align: middle;
+  height: 47px;
+  color: hsla(0, 0%, 100%, 0.6);
+  background-color: #363738;
+}
+
+.tmfContent {
+  margin: 0 auto;
+  width: 950px;
+}
+
+.tmfList {
+  list-style: none;
+  font-size: 12px;
+  margin: auto;
+  text-align: right;
+  padding: 15px 0 12px 210px;
+}
+
+.USA {
+  color: #c8cbcc;
+  float: left;
+  text-align: left;
+  width: 200px;
+  padding: 13px 0 12px 10px;
+  font-size: 12px;
+}
+
+.flag {
+  width: 15px;
+  height: 11px;
+  margin-right: 8px;
+}
+
+.tmfListItem {
+  color: #c8cbcc;
+  font-size: 12px;
+  display: inline-block;
 }

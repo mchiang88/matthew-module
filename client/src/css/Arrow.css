@@ -7,10 +7,3 @@
   box-sizing: border-box;
 }
 
-#footerArrow {
-  display: flex;
-  width: 24px;
-  position: relative;
-  right: 11px;
-  height: 49px;
-}
