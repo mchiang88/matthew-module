@@ -3,6 +3,7 @@ import OverallRating from './OverallRating';
 import Rating from './Rating';
 import Specs from './Specs';
 import Sort from './Sort';
+import Footer from './Footer';
 import '../css/App.css';
 import axios from 'axios';
 
@@ -139,37 +140,41 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3 id="RR">Ratings & Reviews</h3>
-        <div className="container1">
-          <OverallRating
-            ratingToStarTranslation={this.ratingToStarTranslation}
-            rating={this.state.overallRating}
-            data={this.state.data}
-          />
-          <div className="percentage">
-            <div className="percent">{this.state.percent}%</div>
-            <div className="customersRec">of customers recommend this product</div>
-          </div>
-        </div>
-        <div className="container3">
-          <div className="container4">
-            <Rating
-              handleRateClick={this.handleRateClick}
+        <div className="RatingReviews">
+          <h3 id="RR">Ratings & Reviews</h3>
+          <div className="container1">
+            <OverallRating
+              ratingToStarTranslation={this.ratingToStarTranslation}
+              rating={this.state.overallRating}
               data={this.state.data}
-              filters={this.state.filters}
-              handleRemoveFilterClick={this.handleRemoveFilterClick}
             />
-            <Specs data={this.state.data} />
+            <div className="percentage">
+              <div className="percent">{this.state.percent}%</div>
+              <div className="customersRec">of customers recommend this product</div>
+            </div>
           </div>
-          <Sort
-            view={this.state.view}
-            limit={this.state.limit}
-            comments={this.state.comments}
-            handleClick={this.handleClick}
-            handleLoadClick={this.handleLoadClick}
-            ratingToStarTranslation={this.ratingToStarTranslation}
-          />
+          <div className="container3">
+            <div className="container4">
+              <Rating
+                handleRateClick={this.handleRateClick}
+                data={this.state.data}
+                filters={this.state.filters}
+                handleRemoveFilterClick={this.handleRemoveFilterClick}
+              />
+              <Specs data={this.state.data} />
+            </div>
+            <Sort
+              view={this.state.view}
+              limit={this.state.limit}
+              comments={this.state.comments}
+              handleClick={this.handleClick}
+              handleLoadClick={this.handleLoadClick}
+              ratingToStarTranslation={this.ratingToStarTranslation}
+            />
+          </div>
         </div>
+        <div className="Separator"></div>
+        <Footer />
       </div>
     );
   }

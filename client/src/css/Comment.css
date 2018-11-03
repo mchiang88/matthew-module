@@ -111,7 +111,7 @@ hr {
   font-size: 20px;
   line-height: 18px;
   margin-bottom: 10px;
-  font-family: 'Adineue PRO kz',Helvetica,Arial,sans-serif;
+  font-family: 'Adineue PRO kz', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
@@ -138,4 +138,6 @@ span {
 
 #logo {
   margin-right: 10px;
+  width: 34px;
+  height: 34px;
 }

@@ -1,0 +1,96 @@
+.footerHead {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  position: relative;
+  padding: 40px 0 20px 0;
+}
+
+.footerFoot {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.headerContent {
+  display: flex;
+  max-width: 960px;
+}
+
+.signUp {
+  text-align: left;
+  width: 50%;
+  letter-spacing: 1.5px;
+  color: white;
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 600;
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
+}
+
+.bargain {
+  color: #0a5;
+}
+
+.signAndButton {
+  width: 50%;
+}
+
+.email {
+  height: 50px;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 50px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  border: 1.01565px solid #98989a;
+  padding: 0 18px;
+  width: 276.969px;
+  margin: 0;
+}
+
+.emailButton {
+  cursor: pointer;
+  height: 52px;
+  padding: 0;
+  position: relative;
+  right: 48px;
+  bottom: 1px;
+  background-color: #0071ae;
+  color: white;
+}
+
+.footerArrow {
+  width: 24px;
+  position: relative;
+  right: 11px;
+  height: 49px;
+}
+
+.footerFoot {
+  width: 960px;
+  margin: auto;
+  height: 343px;
+  padding-top: 20px;
+}
+
+li,
+h5 {
+  text-align: left;
+}
+
+h5 {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif
+}
+
+li {
+  line-height: 23px;
+  font-size: 13px;
+}
