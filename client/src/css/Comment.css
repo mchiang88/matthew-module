@@ -34,6 +34,7 @@
 }
 
 .userName {
+  font-family: adihausdin-bold;
   font-weight: 700;
   font-size: 14px;
 }
@@ -110,11 +111,33 @@ hr {
   font-size: 20px;
   line-height: 18px;
   margin-bottom: 10px;
-  font-family: 'Adineue PRO kz',Helvetica,Arial,sans-serif;
+  font-family: 'Adineue PRO kz', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   clear: both;
   text-align: left;
+}
+
+.response {
+  text-align: left;
+  padding: 20px;
+  margin: 20px 0px;
+  background-color: #ebedee;
+  box-sizing: border-box;
+}
+
+.responseHeader {
+  margin-bottom: 20px;
+}
+
+span {
+  vertical-align: top;
+}
+
+#logo {
+  margin-right: 10px;
+  width: 34px;
+  height: 34px;
 }

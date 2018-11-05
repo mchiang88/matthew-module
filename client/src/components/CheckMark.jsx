@@ -6,8 +6,8 @@ const CheckMark = props => (
     <path
       fill="none"
       stroke="currentColor"
-      stroke-linecap="square"
-      stroke-miterlimit="10"
+      strokeLinecap="square"
+      strokemmiterlimit="10"
       d="M2.5 10.5l4 4 10-10"
     />
   </svg>

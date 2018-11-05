@@ -1,9 +1,8 @@
 .sort {
-  width: 38%;
-  margin-left: 41.81px;
+  width:  58.33333%;
+  margin-left: 4.16667%;
   padding-left: 15px;
   padding-right: 15px;
-  display: inline-block;
 }
 
 .sortOn {
@@ -27,7 +26,7 @@
   height: 50px;
   padding: 0 21px 0 21px;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-family: adihausdin-bold;
   cursor: pointer;
 }
 
@@ -75,6 +74,7 @@
 }
 
 .buttons {
+  font-family: adihausdin-bold;
   display: flex;
 }
 

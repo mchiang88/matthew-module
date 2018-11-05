@@ -4,11 +4,12 @@
   background-color: #d9dcdd;
   width: 230px;
   display: inline-block;
+  vertical-align: top;
 }
 
 .ratingNumber {
   font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
-  font-size: 56px;
+  font-size: 66px;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
@@ -21,4 +22,8 @@
   text-align: center;
   display: inline-block;
   font-size: 14px;
+}
+
+strong {
+  font-family: adihausdin-bold;
 }
