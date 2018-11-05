@@ -3,10 +3,6 @@ const Comments = require('../models');
 
 const fakeData = [];
 
-// Run npm run seed and then 10-50 reviews will be created for each prodId
-// On refresh, componentDidMount will randomize the prodId and the
-// GET requests will get data/comments for that particular prodId
-
 for (let j = 1; j <= 100; j++) {
   const randomNumber = Math.floor(Math.random() * 40 + 10);
   for (let i = 0; i < randomNumber; i++) {
