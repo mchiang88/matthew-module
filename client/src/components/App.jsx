@@ -11,6 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      prodId: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
       data: [],
       percent: 0,
       overallRating: 0,
@@ -27,18 +28,18 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.fetch();
-    this.fetchComments(this.state.view, this.state.limit, this.state.filters);
+    this.fetch(this.state.prodId);
+    this.fetchComments(this.state.view, this.state.limit, this.state.filters, this.state.prodId);
   }
   componentDidUpdate(prevProps, prevState) {
     if (this.state.limit !== prevState.limit || this.state.view !== prevState.view) {
-      this.fetchComments(this.state.view, this.state.limit, this.state.filters);
+      this.fetchComments(this.state.view, this.state.limit, this.state.filters, this.state.prodId);
     }
   }
 
-  fetch() {
+  fetch(prodId) {
     axios
-      .get('/api')
+      .get(`/api/prodId:${prodId}`)
       .then(result => {
         console.log(result);
         this.setState({
@@ -51,10 +52,10 @@ class App extends React.Component {
       });
   }
 
-  fetchComments(type, limit, filters) {
+  fetchComments(type, limit, filters, prodId) {
     filters = JSON.stringify(filters);
     axios
-      .get(`/api/${type}/${limit}?filters=${filters}`)
+      .get(`/api/prodId:${prodId}/${type}/limit=${limit}?filters=${filters}`)
       .then(result => {
         this.setState({
           comments: result.data,
@@ -121,7 +122,7 @@ class App extends React.Component {
         filters: currentFilters,
       },
       () => {
-        this.fetchComments(this.state.view, this.state.limit, this.state.filters);
+        this.fetchComments(this.state.view, this.state.limit, this.state.filters, this.state.prodId);
       },
     );
   }
@@ -132,7 +133,7 @@ class App extends React.Component {
         filters: [],
       },
       () => {
-        this.fetchComments(this.state.view, this.state.limit, this.state.filters);
+        this.fetchComments(this.state.view, this.state.limit, this.state.filters, this.state.prodId);
       },
     );
   }
