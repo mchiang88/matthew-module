@@ -1,12 +1,19 @@
 @font-face {
   font-family: 'AdihausDIN-bold';
-  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Bold.woff2?hash=1oG5G')
+  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Bold.woff2')
     format('woff2');
 }
 
 @font-face {
-  font-family: "AdihausDIN";
-  src: url("https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Regular.woff2") format('woff2');
+  font-family: 'AdihausDIN';
+  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Regular.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'adineue PRO KZ';
+  src: url('https://www.adidas.com/glass/assets/fonts/adidas/adineuePRO-Black.woff2')
+    format('woff2');
 }
 
 body {
