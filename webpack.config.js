@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+require('dotenv').config();
 
 module.exports = {
   mode: 'development',
@@ -26,4 +28,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.HOSTNAME': JSON.stringify(process.env.HOSTNAME),
+      'process.env.PORT': JSON.stringify(process.env.PORT),
+    }),
+  ],
 };

@@ -6,6 +6,7 @@ import Sort from './Sort';
 import Footer from './Footer';
 import '../css/App.css';
 import axios from 'axios';
+// require('dotenv').config();
 
 class App extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class App extends React.Component {
     this.handleLoadClick = this.handleLoadClick.bind(this);
     this.handleRateClick = this.handleRateClick.bind(this);
     this.handleRemoveFilterClick = this.handleRemoveFilterClick.bind(this);
+    axios.defaults.baseURL = "http://" + process.env.HOSTNAME + ':' + process.env.PORT;
   }
 
   componentDidMount() {
