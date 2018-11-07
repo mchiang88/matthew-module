@@ -2,7 +2,7 @@
 
 -Run npm install to install all the dependencies
 
--Provided you have MySQL installed, in /database/index.jsx, set the user and password on line 3 to your username and password for your MySQL server
+-Provided you have MySQL installed, create a file called .env and copy & paste envExample.txt with your own host, port, db_name, etc.
 
 -Run npm run seed and then 10-50 reviews will be created for each prodId
 
