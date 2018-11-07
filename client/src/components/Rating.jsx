@@ -27,7 +27,7 @@ const Rating = props => {
   }
 
   return (
-    <div className="rating">
+    <div className="ratingM">
       <h5 id="breakdown">Rating Breakdown</h5>
       {props.filters.length > 0 ? filterStatus : ''}
       <ul>

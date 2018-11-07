@@ -6,7 +6,6 @@ import Sort from './Sort';
 import Footer from './Footer';
 import '../css/App.css';
 import axios from 'axios';
-// require('dotenv').config();
 
 class App extends React.Component {
   constructor(props) {
@@ -26,7 +25,7 @@ class App extends React.Component {
     this.handleLoadClick = this.handleLoadClick.bind(this);
     this.handleRateClick = this.handleRateClick.bind(this);
     this.handleRemoveFilterClick = this.handleRemoveFilterClick.bind(this);
-    axios.defaults.baseURL = "http://" + process.env.HOSTNAME + ':' + process.env.PORT;
+    axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
   }
 
   componentDidMount() {
@@ -124,7 +123,12 @@ class App extends React.Component {
         filters: currentFilters,
       },
       () => {
-        this.fetchComments(this.state.view, this.state.limit, this.state.filters, this.state.prodId);
+        this.fetchComments(
+          this.state.view,
+          this.state.limit,
+          this.state.filters,
+          this.state.prodId,
+        );
       },
     );
   }
@@ -135,14 +139,21 @@ class App extends React.Component {
         filters: [],
       },
       () => {
-        this.fetchComments(this.state.view, this.state.limit, this.state.filters, this.state.prodId);
+        this.fetchComments(
+          this.state.view,
+          this.state.limit,
+          this.state.filters,
+          this.state.prodId,
+        );
       },
     );
   }
 
   render() {
-    return (
-      <div>
+    let section;
+
+    if (this.props.section === 'reviews') {
+      section = (
         <div className="RatingReviews">
           <h3 id="RR">Ratings & Reviews</h3>
           <div className="container1">
@@ -176,10 +187,11 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <div className="Separator"></div>
-        <Footer />
-      </div>
-    );
+      );
+    } else if (this.props.section === 'footer') {
+      section = <Footer />;
+    }
+    return section;
   }
 }
 

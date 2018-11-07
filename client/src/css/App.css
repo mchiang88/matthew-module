@@ -27,7 +27,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-#root {
+#reviews {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
@@ -47,6 +47,7 @@ body {
 }
 
 #RR {
+  width: 100%;
   font-family: 'adineue PRO KZ', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -107,8 +108,3 @@ body {
   height: 730px;
 }
 
-.Separator {
-  width: 100%;
-  height: 200px;
-  background-color: gray;
-}
