@@ -17,6 +17,10 @@
 }
 
 body {
+  margin: 0; 
+}
+
+.main {
   text-align: center;
   margin: 0;
   font-family: AdihausDIN, Helvetica, Arial, sans-serif;
@@ -25,9 +29,6 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-.main {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
