@@ -77,7 +77,7 @@ class Footer extends React.Component {
         </div>
         <div className={styles.footerFoot}>
           <ul className={styles.list1}>
-            <h5>CUSTOMER SUPPORT</h5>
+            <h5 className={styles.label}>CUSTOMER SUPPORT</h5>
             <li className={styles.footerListItem}>Help</li>
             <li className={styles.footerListItem}>Order Tracker</li>
             <li className={styles.footerListItem}>Returns & Refunds</li>
@@ -87,7 +87,7 @@ class Footer extends React.Component {
             <li className={styles.footerListItem}>Site Map</li>
           </ul>
           <ul className={styles.list2}>
-            <h5>COMPANY INFO</h5>
+            <h5 className={styles.label}>COMPANY INFO</h5>
             <li style={{'height': '14px'}}></li>
             <li className={styles.footerListItem}>About Us</li>
             <li className={styles.footerListItem}>Careers</li>
@@ -99,14 +99,14 @@ class Footer extends React.Component {
             <li className={styles.footerListItem}>Creators Club</li>
           </ul>
           <ul className={styles.list3}>
-            <h5>PARTNER SITES</h5>
+            <h5 className={styles.label}>PARTNER SITES</h5>
             <li style={{'height': '14px'}}></li>
             <li className={styles.footerListItem}>shoedidas Outdoor</li>
             <li className={styles.footerListItem}>miTeam</li>
             <li className={styles.footerListItem}>shoedidas Archive</li>
           </ul>
           <ul className={styles.list4}>
-            <h5>PRIVACY & TERMS</h5>
+            <h5 className={styles.label}>PRIVACY & TERMS</h5>
             <li style={{'height': '14px'}}></li>
             <li className={styles.footerListItem}>Privacy & Security</li>
             <li className={styles.footerListItem}>shoedidas - Runtastic Privacy</li>
@@ -115,7 +115,7 @@ class Footer extends React.Component {
             <li className={styles.footerListItem}>Policy on Human Trafficking</li>
           </ul>
           <ul className={styles.list5}>
-            <h5>GIFT CARDS</h5>
+            <h5 className={styles.label}>GIFT CARDS</h5>
             <li style={{'height': '14px'}}></li>
             <li className={styles.footerListItem}>Email a Gift Card</li>
             <li className={styles.footerListItem}>Ship a Gift Card</li>

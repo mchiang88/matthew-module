@@ -12,7 +12,7 @@ const Rating = props => {
             <li className={styles.filterListItem} key={i}>{star} STARS</li>
           ))}
         </ul>
-        <a onClick={props.handleRemoveFilterClick}>Remove all filters</a>
+        <a className={styles.removeFilter} onClick={props.handleRemoveFilterClick}>Remove all filters</a>
       </div>
     );
 
@@ -30,7 +30,7 @@ const Rating = props => {
     <div className={styles.ratingM}>
       <h5 id={styles.breakdown}>Rating Breakdown</h5>
       {props.filters.length > 0 ? filterStatus : ''}
-      <ul>
+      <ul className={styles.listOfStars}>
         <StarListEntry
           id={5}
           handleRateClick={props.handleRateClick}

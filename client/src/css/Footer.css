@@ -72,12 +72,8 @@
   height: 343px;
 }
 
-li,
-h5 {
+.label {
   text-align: left;
-}
-
-h5 {
   letter-spacing: 1.5px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -87,6 +83,7 @@ h5 {
 }
 
 .footerListItem {
+  text-align: left;
   cursor: pointer;
   line-height: 23px;
   font-size: 13px;
@@ -211,6 +208,7 @@ h5 {
 }
 
 .tmfListItem {
+  text-align: left;
   color: #c8cbcc;
   font-size: 12px;
   display: inline-block;

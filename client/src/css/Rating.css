@@ -17,11 +17,10 @@
   text-align: left;
 }
 
-ul {
+.listOfStars {
   display: inline;
   font-size: 16px;
   line-height: 22px;
-  width: 100%;
   list-style-type: none;
   padding: 0;
 }
@@ -40,11 +39,16 @@ ul {
 }
 
 .filterList {
+  display: inline;
+  font-size: 16px;
+  line-height: 22px;
+  list-style-type: none;
+  padding: 0;
   display: block;
   margin: 0;
 }
 
-a {
+.removeFilter {
   display: inline-block;
   margin-bottom: 20px;
   text-decoration: underline;
@@ -52,7 +56,7 @@ a {
   transition: color 0.15s, background-color 0.15s;
 }
 
-a:hover {
+.removeFilter:hover {
   color: white;
   background-color: black;
 }

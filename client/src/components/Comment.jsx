@@ -19,7 +19,7 @@ const Comment = props => {
       <div className={styles.shoedidas}>
         <div className={styles.responseHeader}>
           <img id={styles.logo} src='\shoedidas_black_3.svg'></img>
-          <span>Response from Shoedidas</span>
+          <span className={styles.shoedidasResponse}>Response from Shoedidas</span>
         </div>
         <div className={styles.responseBody}>{props.comment.response}</div>
       </div>

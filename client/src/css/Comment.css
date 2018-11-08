@@ -62,8 +62,7 @@
 
 .yes,
 .no,
-.reply,
-a {
+.reply {
   color: #000;
 }
 
@@ -102,7 +101,7 @@ a {
   color: white;
 }
 
-hr {
+.divider {
   color: #98989a;
   margin-bottom: 40px;
 }
@@ -132,7 +131,7 @@ hr {
   margin-bottom: 20px;
 }
 
-span {
+.shoedidasResponse {
   vertical-align: top;
 }
 
