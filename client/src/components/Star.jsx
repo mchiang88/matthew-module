@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/Star.css';
+import styles from '../css/Star.css';
 
 const Star = props => (
-  <svg className="star" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+  <svg className={styles.star} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
     <linearGradient id={props.id}>
       <stop offset={props.filling} stopOpacity="1" stopColor="currentcolor" />
       <stop offset={props.filling} stopOpacity="1" stopColor="currentcolor" />

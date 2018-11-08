@@ -1,70 +1,70 @@
 import React from 'react';
-import '../css/Comment.css';
+import styles from '../css/Comment.css';
 import Star from './Star';
 import CheckMark from './CheckMark';
 import moment from 'moment';
 
 const Comment = props => {
   let recommend = (
-    <div className="recommend">
+    <div className={styles.recommend}>
       <CheckMark />
-      <span className="recommendComment">I recommend this product</span>
+      <span className={styles.recommendComment}>I recommend this product</span>
     </div>
   );
 
-  let verified = <span className="verified"> - Verified Purchaser</span>;
+  let verified = <span className={styles.verified}> - Verified Purchaser</span>;
 
   let response = (
-    <div className="response">
-      <div className="shoedidas">
-        <div className="responseHeader">
-          <img id="logo" src='\shoedidas_black_3.svg'></img>
+    <div className={styles.response}>
+      <div className={styles.shoedidas}>
+        <div className={styles.responseHeader}>
+          <img id={styles.logo} src='\shoedidas_black_3.svg'></img>
           <span>Response from Shoedidas</span>
         </div>
-        <div className="responseBody">{props.comment.response}</div>
+        <div className={styles.responseBody}>{props.comment.response}</div>
       </div>
     </div>
   );
 
   return (
-    <div className="comment">
-      <div className="container5">
-        <div className="commentStars">
+    <div className={styles.comment}>
+      <div className={styles.container5}>
+        <div className={styles.commentStars}>
           {props.ratingToStarTranslation(props.comment.prodRating).map((filling, i) => (
             <Star filling={filling} key={i} id={Math.random()}/>
           ))}
         </div>
-        <div className="date">{moment(props.comment.date).format('ll')}</div>
+        <div className={styles.date}>{moment(props.comment.date).format('ll')}</div>
       </div>
-      <div className="commentHeader">
+      <div className={styles.commentHeader}>
         {props.comment.header === null ? '' : props.comment.header}
       </div>
-      <div className="commentBody">{props.comment.body}</div>
+      <div className={styles.commentBody}>{props.comment.body}</div>
       {props.comment.recommend ? recommend : ''}
-      <div className="userInfo">
-        <span className="userName">{props.comment.user}</span>
+      <div className={styles.userInfo}>
+        <span className={styles.userName}>{props.comment.user}</span>
         {props.comment.verified ? verified : ''}
       </div>
       {props.comment.response === null ? '' : response}
-      <div className="commentFooter">
-        <a className="reply">
+      <div className={styles.commentFooter}>
+        <a className={styles.reply}>
           Reply
         </a>
-        <div className="reviewHelpful">
-          <div className="reviewQuestion">Was this review helpful? </div>
-          <div className="helpful">
-            <div className="yes">Yes</div>
-            <span className="yesCount">({props.comment.yesRating})</span>
+        <div className={styles.reviewHelpful}>
+          <div className={styles.reviewQuestion}>Was this review helpful? </div>
+          <div className={styles.helpful}>
+            <div className={styles.yes}>Yes</div>
+            <span className={styles.yesCount}>({props.comment.yesRating})</span>
           </div>
-          <div className="unhelpful">
-            <div className="no" href="">
+          <div className={styles.unhelpful}>
+            <div className={styles.no} href="">
               No
             </div>
-            <span className="noCount">({props.comment.noRating})</span>
+            <span className={styles.noCount}>({props.comment.noRating})</span>
           </div>
         </div>
       </div>
-      <hr className="divider" />
+      <hr className={styles.divider} />
     </div>
   );
 };

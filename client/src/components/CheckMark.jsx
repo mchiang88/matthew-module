@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/CheckMark.css';
+import styles from '../css/CheckMark.css';
 
 const CheckMark = props => (
-  <svg viewBox="0 0 19 19" id="checkmark" width="100%" height="100%">
+  <svg viewBox="0 0 19 19" id={styles.checkmark} width="100%" height="100%">
     <path
       fill="none"
       stroke="currentColor"

@@ -1,14 +1,14 @@
 import React from 'react';
-import '../css/StarListEntry.css'
+import styles from '../css/StarListEntry.css'
 
 const StarListEntry = props => (
   <div onClick={props.handleRateClick} id={props.id}>
-    <li className="starListEntry">
-      <div className="starRating">{props.id} STARS</div>
-      <div className="starPercentage">
-        <div className="filled" style={{width: `${(props.count/props.length * 100)}%`}}></div>
+    <li className={styles.starListEntry}>
+      <div className={styles.starRating}>{props.id} STARS</div>
+      <div className={styles.starPercentage}>
+        <div className={styles.filled} style={{width: `${(props.count/props.length * 100)}%`}}></div>
       </div>
-      <div className="starCount">{props.count}</div>
+      <div className={styles.starCount}>{props.count}</div>
     </li>
   </div>
 );

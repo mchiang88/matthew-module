@@ -1,17 +1,17 @@
 import React from 'react';
-import '../css/OverallRating.css';
+import styles from '../css/OverallRating.css';
 import Star from './Star';
 
 const OverallRating = props => (
-  <div className="overallRating">
-    <div className="ratingNumber">{props.rating}</div>
-    <div className="container2">
-      <div className="ratingStars">
+  <div className={styles.overallRating}>
+    <div className={styles.ratingNumber}>{props.rating}</div>
+    <div className={styles.container2}>
+      <div className={styles.ratingStars}>
         {props.ratingToStarTranslation(props.rating).map((filling, i) => (
           <Star filling={filling} key={i} id={Math.random()}/>
         ))}
       </div>
-      <span className="reviewNumber">
+      <span className={styles.reviewNumber}>
         <strong>{props.data.length}</strong> Reviews
       </span>
     </div>

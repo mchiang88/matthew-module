@@ -4,7 +4,7 @@ import Rating from './Rating';
 import Specs from './Specs';
 import Sort from './Sort';
 import Footer from './Footer';
-import '../css/App.css';
+import styles from '../css/App.css';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -97,8 +97,12 @@ class App extends React.Component {
   }
 
   handleClick(e) {
+    let view = e.target.textContent.toLowerCase();
+    if (view === 'helpful') {
+      view = 'helpfulButton';
+    }
     this.setState({
-      view: e.target.className,
+      view
     });
   }
 
@@ -154,37 +158,39 @@ class App extends React.Component {
 
     if (this.props.section === 'reviews') {
       section = (
-        <div className="RatingReviews">
-          <h3 id="RR">Ratings & Reviews</h3>
-          <div className="container1">
-            <OverallRating
-              ratingToStarTranslation={this.ratingToStarTranslation}
-              rating={this.state.overallRating}
-              data={this.state.data}
-            />
-            <div className="percentage">
-              <div className="percent">{this.state.percent}%</div>
-              <div className="customersRec">of customers recommend this product</div>
-            </div>
-          </div>
-          <div className="container3">
-            <div className="container4">
-              <Rating
-                handleRateClick={this.handleRateClick}
+        <div className={styles.main}>
+          <div className={styles.RatingReviews}>
+            <h3 id={styles.RR}>Ratings & Reviews</h3>
+            <div className={styles.container1}>
+              <OverallRating
+                ratingToStarTranslation={this.ratingToStarTranslation}
+                rating={this.state.overallRating}
                 data={this.state.data}
-                filters={this.state.filters}
-                handleRemoveFilterClick={this.handleRemoveFilterClick}
               />
-              <Specs data={this.state.data} />
+              <div className={styles.percentage}>
+                <div className={styles.percent}>{this.state.percent}%</div>
+                <div className={styles.customersRec}>of customers recommend this product</div>
+              </div>
             </div>
-            <Sort
-              view={this.state.view}
-              limit={this.state.limit}
-              comments={this.state.comments}
-              handleClick={this.handleClick}
-              handleLoadClick={this.handleLoadClick}
-              ratingToStarTranslation={this.ratingToStarTranslation}
-            />
+            <div className={styles.container3}>
+              <div className={styles.container4}>
+                <Rating
+                  handleRateClick={this.handleRateClick}
+                  data={this.state.data}
+                  filters={this.state.filters}
+                  handleRemoveFilterClick={this.handleRemoveFilterClick}
+                />
+                <Specs data={this.state.data} />
+              </div>
+              <Sort
+                view={this.state.view}
+                limit={this.state.limit}
+                comments={this.state.comments}
+                handleClick={this.handleClick}
+                handleLoadClick={this.handleLoadClick}
+                ratingToStarTranslation={this.ratingToStarTranslation}
+              />
+            </div>
           </div>
         </div>
       );

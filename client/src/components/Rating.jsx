@@ -1,15 +1,15 @@
 import React from 'react';
 import StarListEntry from './StarListEntry';
-import '../css/Rating.css';
+import styles from '../css/Rating.css';
 
 const Rating = props => {
 
   const filterStatus = (
-      <div className="filterStatus">
+      <div className={styles.filterStatus}>
         Showing reviews:{' '}
-        <ul className="filterList">
+        <ul className={styles.filterList}>
           {props.filters.map((star, i) => (
-            <li className="filterListItem" key={i}>{star} STARS</li>
+            <li className={styles.filterListItem} key={i}>{star} STARS</li>
           ))}
         </ul>
         <a onClick={props.handleRemoveFilterClick}>Remove all filters</a>
@@ -27,8 +27,8 @@ const Rating = props => {
   }
 
   return (
-    <div className="ratingM">
-      <h5 id="breakdown">Rating Breakdown</h5>
+    <div className={styles.ratingM}>
+      <h5 id={styles.breakdown}>Rating Breakdown</h5>
       {props.filters.length > 0 ? filterStatus : ''}
       <ul>
         <StarListEntry

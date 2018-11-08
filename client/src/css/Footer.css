@@ -160,6 +160,17 @@ h5 {
 }
 
 .emailRed {
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  height: 47.969px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  border: 1.01565px solid #98989a;
+  padding: 0 18px;
+  width: 326.969px;
+  margin: 0;
   border-color: #e63f3f;
   box-shadow: 0 1px #e63f3f;
 }
