@@ -1,5 +1,5 @@
 .sort {
-  width:  58.33333%;
+  width:  57.33333%;
   margin-left: 4.16667%;
   padding-left: 15px;
   padding-right: 15px;
@@ -76,6 +76,7 @@
 .buttons {
   font-family: adihausdin-bold;
   display: flex;
+  line-height: 16px;
 }
 
 .relevant,

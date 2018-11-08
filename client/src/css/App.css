@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'AdihausDIN-bold';
-  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Bold.woff2')
+  src: url('https://s3-us-west-1.amazonaws.com/fec-matthew/AdihausDIN-Bold.woff2')
     format('woff2');
 }
 
 @font-face {
   font-family: 'AdihausDIN';
-  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Regular.woff2')
+  src: url('https://s3-us-west-1.amazonaws.com/fec-matthew/AdihausDIN-Regular.woff2')
     format('woff2');
 }
 
 @font-face {
   font-family: 'adineue PRO KZ';
-  src: url('https://www.adidas.com/glass/assets/fonts/adidas/adineuePRO-Bold.woff2')
+  src: url('https://s3-us-west-1.amazonaws.com/fec-matthew/adineuePRO-Bold.woff2')
     format('woff2');
 }
 
@@ -101,7 +101,7 @@ body {
 
 .container4 {
   margin-left: 4.16667%;
-  width: 29.16667%;
+  width: 31%;
   padding-left: 15px;
   padding-right: 15px;
   vertical-align: top;
