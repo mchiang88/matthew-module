@@ -16,7 +16,7 @@
     format('woff2');
 }
 
-.main {
+body {
   text-align: center;
   margin: 0;
   font-family: AdihausDIN, Helvetica, Arial, sans-serif;
@@ -25,6 +25,9 @@
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+.main {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;

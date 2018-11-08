@@ -72,6 +72,15 @@
   height: 343px;
 }
 
+.list1, .list2, .list3, .list4, .list5 {
+  display: inline;
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
 .label {
   text-align: left;
   letter-spacing: 1.5px;
