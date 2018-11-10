@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon ./server",
-    "build": "webpack -w",
+    "build": "webpack",
     "seed": "node ./database/seed/seedData"
   },
   "repository": {

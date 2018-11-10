@@ -51,6 +51,8 @@
 }
 
 .reply {
+  cursor: pointer;
+  text-decoration: underline;
   float: left;
   transition: color 0.15s, background-color 0.15s;
 }

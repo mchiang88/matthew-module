@@ -6,7 +6,7 @@ const connection = new Sequelize(
   process.env.DB_USERNAME,
   process.env.DB_PASSWORD,
   {
-    host: process.env.HOSTNAME,
+    host: 'db',
     dialect: 'mysql',
   },
 );
