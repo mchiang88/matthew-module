@@ -7,11 +7,13 @@ import Footer from './Footer';
 import styles from '../css/App.css';
 import axios from 'axios';
 
+let randomId = Math.floor(Math.random() * (1000)) + 1;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      prodId: Math.floor(Math.random() * (100 - 1 + 1)) + 1,
+      prodId: randomId,
       data: [],
       percent: 0,
       overallRating: 0,
@@ -45,8 +47,8 @@ class App extends React.Component {
         console.log(result);
         this.setState({
           data: result.data,
-        });
-        this.extractInfo();
+        }, this.extractInfo);
+        // this.extractInfo();
       })
       .catch(err => {
         console.error('Fetch error, ', err);

@@ -3,3 +3,5 @@ client/dist/bundle.js
 config.js
 coverage
 .env
+*.csv
+logfile
