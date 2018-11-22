@@ -12,7 +12,7 @@ const OverallRating = props => (
         ))}
       </div>
       <span className={styles.reviewNumber}>
-        <strong className={styles.bold}>{props.data.length}</strong> Reviews
+        <strong className={styles.bold}>{props.data.numRatings}</strong> Reviews
       </span>
     </div>
   </div>

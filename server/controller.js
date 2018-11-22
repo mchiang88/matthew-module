@@ -1,18 +1,17 @@
-const Sequelize = require('sequelize');
-const Comments = require('../database/models');
+const { Comments, ProductInfo } = require('../database/models');
 
-const { Op } = Sequelize;
 
 module.exports = {
   get: (req, res) => {
     const { id } = req.params;
-    Comments.findAll({ where: { prodId: id }, benchmark: true })
-      .then((result) => {
-        res.status(200).send(result);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    ProductInfo
+      .find({ prodId: id })
+      .then(result => res.status(200).send(result))
+      .catch(err => console.error(err));
+    // Comments
+    //   .find({ prodId: id })
+    //   .then(result => res.status(200).send(result))
+    //   .catch(err => console.error(err));
   },
   getSort: (req, res) => {
     const { type } = req.params;
@@ -28,31 +27,28 @@ module.exports = {
       field = 'date';
     }
 
+    console.log(`type: ${type} , typeof: ${typeof type}`);
+    console.log(`limit: ${limit}, typeof: ${typeof limit}`);
+    console.log(`filters: ${filters}, typeof: ${typeof filters}`);
+
     if (filters !== '[]') {
       console.log(filters);
-      Comments.findAll({
-        order: [[`${field}`, 'DESC']],
-        limit: parseInt(limit, 10),
-        where: { prodRating: { [Op.or]: JSON.parse(filters) }, prodId: id },
-      })
-        .then((result) => {
-          res.status(200).send(result);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+      Comments
+        .find({ prodRating: { $in: JSON.parse(filters) }, prodId: id })
+        .sort([[field, -1]])
+        .limit(parseInt(limit, 10))
+        .then(result => res.status(200).send(result))
+        .catch(err => console.error(err));
     } else {
-      Comments.findAll({
-        order: [[`${field}`, 'DESC']],
-        limit: parseInt(limit, 10),
-        where: { prodId: id },
-      })
-        .then((result) => {
-          res.status(200).send(result);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+      Comments
+        .find({ prodId: id })
+        .sort([[field, -1]])
+        .limit(parseInt(limit, 10))
+        .then(result => res.status(200).send(result))
+        .catch(err => console.error(err));
     }
   },
 };
+
+
+

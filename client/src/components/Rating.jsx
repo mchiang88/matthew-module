@@ -16,15 +16,15 @@ const Rating = props => {
       </div>
     );
 
-  const calculateStars = num => {
-    let count = 0;
-    props.data.forEach(comment => {
-      if (comment.prodRating === num) {
-        count += 1;
-      }
-    });
-    return count;
-  }
+  // const calculateStars = num => {
+  //   let count = 0;
+  //   props.data.forEach(comment => {
+  //     if (comment.prodRating === num) {
+  //       count += 1;
+  //     }
+  //   });
+  //   return count;
+  // }
 
   return (
     <div className={styles.ratingM}>
@@ -34,32 +34,32 @@ const Rating = props => {
         <StarListEntry
           id={5}
           handleRateClick={props.handleRateClick}
-          length={props.data.length}
-          count={calculateStars(5)}
+          length={props.data.numRatings}
+          count={props.data.num5star}
         />
         <StarListEntry
           id={4}
           handleRateClick={props.handleRateClick}
-          length={props.data.length}
-          count={calculateStars(4)}
+          length={props.data.numRatings}
+          count={props.data.num4star}
         />
         <StarListEntry
           id={3}
           handleRateClick={props.handleRateClick}
-          length={props.data.length}
-          count={calculateStars(3)}
+          length={props.data.numRatings}
+          count={props.data.num3star}
         />
         <StarListEntry
           id={2}
           handleRateClick={props.handleRateClick}
-          length={props.data.length}
-          count={calculateStars(2)}
+          length={props.data.numRatings}
+          count={props.data.num2star}
         />
         <StarListEntry
           id={1}
           handleRateClick={props.handleRateClick}
-          length={props.data.length}
-          count={calculateStars(1)}
+          length={props.data.numRatings}
+          count={props.data.num1star}
         />
       </ul>
     </div>

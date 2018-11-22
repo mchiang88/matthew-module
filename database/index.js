@@ -1,29 +1,11 @@
-const Sequelize = require('sequelize');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
-const connection = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USERNAME,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.HOSTNAME,
-    dialect: 'postgres',
-    operatorsAliases: false,
-    pool: {
-      max: 5,
-      min: 0,
-      idle: 10000,
-      handleDisconnects: true
-    }
-  });
+mongoose.connect('mongodb://localhost/sdc')
+  .then(() => console.log(`connected to mongoDB (sdc)`))
+  .catch(err => console.error(`unable to connect to mongoDB: ${err}`))
+;
 
-connection
-  .authenticate()
-  .then(() => {
-    console.log('Postgres now connected');
-  })
-  .catch((err) => {
-    console.error('Unable to connect to database: ', err);
-  });
+const connection = mongoose.connection;
 
 module.exports = connection;

@@ -1,35 +1,61 @@
-const Sequelize = require('sequelize');
-const connection = require('./');
+const mongoose = require('mongoose');
+const connection = require('.');
 
-const Comments = connection.define(
-  'comments',
+const commentSchema = new mongoose.Schema({
+  user: String,
+  prodRating: Number,
+  yesRating: Number,
+  noRating: Number,
+  date: Date,
+  body: String,
+  verified: Boolean,
+  recommend: Boolean,
+  size: Number,
+  width: Number,
+  comfort: Number,
+  quality: Number,
+  response: String,
+  prodId: Number,
+  header: String
+}, 
   {
-    id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    user: Sequelize.STRING,
-    prodRating: Sequelize.INTEGER,
-    yesRating: Sequelize.INTEGER,
-    noRating: Sequelize.INTEGER,
-    date: Sequelize.DATE,
-    body: Sequelize.TEXT,
-    verified: Sequelize.BOOLEAN,
-    recommend: Sequelize.BOOLEAN,
-    size: Sequelize.INTEGER,
-    width: Sequelize.INTEGER,
-    comfort: Sequelize.INTEGER,
-    quality: Sequelize.INTEGER,
-    response: Sequelize.TEXT,
-    prodId: Sequelize.INTEGER,
-    header: Sequelize.TEXT,
-  },
+    timestamps: false
+  }
+)
+
+const productInfoSchema = new mongoose.Schema({
+  prodId: Number,
+  avgRating: Number,
+  numRatings: Number,
+  recommendCount: Number,
+  num1star: Number,
+  num2star: Number,
+  num3star: Number,
+  num4star: Number,
+  num5star: Number,
+  avgSize: Number,
+  avgWidth: Number,
+  avgComfort: Number,
+  avgQuality: Number
+},
   {
-    createdAt: false,
-    updatedAt: false
-  },
-);
+    timestamps: false
+  }
+)
 
-connection
-  .sync()
-  .then(() => console.log('Postgres connection synced'))
-  .catch((err) => console.error('Synced failed: ', err));
+// TIMING MIDDLEWARE
+commentSchema.pre('find', function() {
+  this._startTime = Date.now();
+});
 
-module.exports = Comments;
+commentSchema.post('find', function() {
+  if (this._startTime != null) {
+    console.log('Runtime in MS: ', Date.now() - this._startTime);
+  }
+});
+
+const Comments = mongoose.model('comments', commentSchema);
+const ProductInfo = mongoose.model('products', productInfoSchema);
+
+module.exports = { Comments, ProductInfo };
+
