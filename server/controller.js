@@ -27,23 +27,19 @@ module.exports = {
       field = 'date';
     }
 
-    console.log(`type: ${type} , typeof: ${typeof type}`);
-    console.log(`limit: ${limit}, typeof: ${typeof limit}`);
-    console.log(`filters: ${filters}, typeof: ${typeof filters}`);
 
     if (filters !== '[]') {
-      console.log(filters);
       Comments
         .find({ prodRating: { $in: JSON.parse(filters) }, prodId: id })
-        .sort([[field, -1]])
         .limit(parseInt(limit, 10))
+        .sort([[field, -1]])
         .then(result => res.status(200).send(result))
         .catch(err => console.error(err));
     } else {
       Comments
         .find({ prodId: id })
-        .sort([[field, -1]])
         .limit(parseInt(limit, 10))
+        .sort([[field, -1]])
         .then(result => res.status(200).send(result))
         .catch(err => console.error(err));
     }
