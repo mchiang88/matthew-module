@@ -16,8 +16,9 @@
     "test": "jest",
     "start": "nodemon ./server",
     "build": "webpack -w",
-    "seed": "node --max_old_space_size=4096 ./database/seed/createData",
-    "calc": "node ./database/seed/calculateAverages"
+    "generate": "node --max_old_space_size=4096 ./database/seed/createData",
+    "calc": "node ./database/seed/calculateAverages",
+    "server": "node ./server/"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "event-stream": "^3.3.4",
     "express": "^4.16.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "faker": "^4.1.0",

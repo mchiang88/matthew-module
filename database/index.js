@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/sdc')
+mongoose.connect('mongodb://13.57.2.235:27017/sdc')
   .then(() => console.log(`connected to mongoDB (sdc)`))
   .catch(err => console.error(`unable to connect to mongoDB: ${err}`))
 ;

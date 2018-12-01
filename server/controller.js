@@ -8,10 +8,7 @@ module.exports = {
       .find({ prodId: id })
       .then(result => res.status(200).send(result))
       .catch(err => console.error(err));
-    // Comments
-    //   .find({ prodId: id })
-    //   .then(result => res.status(200).send(result))
-    //   .catch(err => console.error(err));
+
   },
   getSort: (req, res) => {
     const { type } = req.params;
@@ -26,7 +23,6 @@ module.exports = {
     } else if (type === 'newest') {
       field = 'date';
     }
-
 
     if (filters !== '[]') {
       Comments

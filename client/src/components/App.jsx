@@ -21,12 +21,12 @@ class App extends React.Component {
       comments: [],
       filters: [],
     };
-    // this.extractInfo = this.extractInfo.bind(this);
+
     this.handleClick = this.handleClick.bind(this);
     this.handleLoadClick = this.handleLoadClick.bind(this);
     this.handleRateClick = this.handleRateClick.bind(this);
     this.handleRemoveFilterClick = this.handleRemoveFilterClick.bind(this);
-    axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
+    // axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
   }
 
   componentDidMount() {
@@ -41,9 +41,9 @@ class App extends React.Component {
 
   fetch(prodId) {
     axios
-      .get(`/api/prodId:${prodId}`)
+      .get(`http://localhost:80/api/prodId:${prodId}`)
+      // .get(`/api/prodId:${prodId}`)
       .then(result => {
-        // console.log(result);
         this.setState({
           data: result.data[0],
           overallRating: result.data[0].avgRating.toFixed(1),
@@ -58,9 +58,9 @@ class App extends React.Component {
   fetchComments(type, limit, filters, prodId) {
     filters = JSON.stringify(filters);
     axios
-      .get(`/api/prodId:${prodId}/${type}/limit=${limit}?filters=${filters}`)
+      .get(`http://localhost:80/api/prodId:${prodId}/${type}/limit=${limit}?filters=${filters}`)
+      // .get(`/api/prodId:${prodId}/${type}/limit=${limit}?filters=${filters}`)
       .then(result => {
-        // console.log(result);
         this.setState({
           comments: result.data,
         });
@@ -69,22 +69,6 @@ class App extends React.Component {
         console.error('Fetch error, ', err);
       });
   }
-
-  // extractInfo() {
-  //   let length = this.state.data.length;
-  //   let percent = 0;
-  //   let overallRating = 0;
-  //   this.state.data.forEach(comment => {
-  //     if (comment.recommend) {
-  //       percent += 1;
-  //     }
-  //     overallRating += comment.prodRating;
-  //   });
-  //   this.setState({
-  //     percent: Math.round((percent / length) * 100),
-  //     overallRating: (overallRating / length).toFixed(1),
-  //   });
-  // }
 
   ratingToStarTranslation(rating) {
     let arr = Array(5).fill('0%');
